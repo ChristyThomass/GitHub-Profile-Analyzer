@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Sun, Moon, Key, Activity, Layers, Scale, Infinity as InfinityIcon } from 'lucide-react';
+import { Github, Key, Layers, Scale } from 'lucide-react';
 import { RateLimitInfo } from '../types';
 
 interface HeaderProps {
@@ -57,36 +57,6 @@ export const Header: React.FC<HeaderProps> = ({
                 Developer statistics, language breakdowns & project showcase
               </p>
             </div>
-          </div>
-
-          {/* Right Actions on Mobile */}
-          <div className="flex items-center gap-1.5 shrink-0 sm:hidden">
-            <button
-              onClick={() => setShowTokenModal(true)}
-              title="GitHub API Status: Unlimited Mode"
-              className="flex items-center gap-1 px-2.5 py-1 rounded-full border border-moss/30 bg-moss/10 dark:bg-ochre/20 text-forest dark:text-cream text-[11px] font-semibold backdrop-blur-md"
-            >
-              <InfinityIcon className="w-3 h-3 text-moss dark:text-ochre" />
-              <span>Unlimited</span>
-            </button>
-            <button
-              onClick={() => setShowTokenModal(true)}
-              title="Configure GitHub API Token"
-              className={`p-1.5 rounded-xl border transition-all backdrop-blur-md ${
-                hasPat
-                  ? 'bg-moss/20 text-forest dark:text-cream border-moss/40'
-                  : 'glass-pill text-forest dark:text-cream'
-              }`}
-            >
-              <Key className="w-3.5 h-3.5 text-moss dark:text-ochre" />
-            </button>
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              title={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-              className="p-1.5 rounded-xl glass-pill text-forest dark:text-cream transition-all"
-            >
-              {darkMode ? <Sun className="w-3.5 h-3.5 text-ochre" /> : <Moon className="w-3.5 h-3.5 text-forest" />}
-            </button>
           </div>
         </div>
 
