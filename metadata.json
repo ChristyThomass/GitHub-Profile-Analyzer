@@ -1,0 +1,6 @@
+{
+  "name": "GitHub Profile Analyzer",
+  "description": "Analyze GitHub user profiles with repository stats, language breakdown charts, activity metrics, profile summaries, shareable cards, and developer comparison.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
